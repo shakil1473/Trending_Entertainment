@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct APIObject: Decodable {
+struct TMDBAPIObject: Decodable {
     var results: [Title] = []
 }
-struct Title: Decodable, Identifiable {
+struct Title: Decodable, Identifiable, Hashable {
     var id: Int
     var title: String?
     var name: String?
